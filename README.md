@@ -1,14 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'dab0b024-d201-4254-b7fb-7f66263f564f'
-  PropagateID: 'dab0b024-d201-4254-b7fb-7f66263f564f'
-  ReservedCode1: 'e1e102aa-562d-4e3f-867d-99b8b9cf8dd9'
-  ReservedCode2: 'e1e102aa-562d-4e3f-867d-99b8b9cf8dd9'
----
-
 # JMS56x
 
 JMicron JMS56x 系列 USB 3.0 → SATA 桥接芯片资料合集（ORICO 9528U3 硬盘盒实测），包含：
@@ -67,5 +56,3 @@ JMicron 2033x M.P. Tool v1.16.14.1，用于：
 ## 免责声明
 
 刷写固件、修改 EEPROM 存在变砖/损坏设备风险，请自行评估风险并做好备份；本仓库所有工具与固件均来自网络收集或个人备份，仅供学习研究使用。
-
-> AI生成
