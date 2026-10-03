@@ -1,0 +1,51 @@
+﻿;=========================================================================
+; JMS56x (VID_152D) UAS -> BOT 覆盖 INF
+; 覆盖所有 JMicron JMS56x 系列 USB-to-SATA 桥接芯片:
+;   JMS561 / JMS566 / JMS567 / JMS568
+; 将设备从 UAS(SCSIAdapter) 强制绑定为 BOT(USB / usbstor) 加载.
+; 不引入任何新 .sys, 只重定向到系统已有的 usbstor.sys.
+;=========================================================================
+[Version]
+Signature   = "$Windows NT$"
+Class       = USB
+ClassGUID   = {36FC9E60-C465-11CF-8056-444553540000}
+Provider    = %Provider%
+DriverVer   = 10/03/2026,1.0.0.0
+CatalogFile = jms56xbot.cat
+
+[Manufacturer]
+%ProviderName% = DevList,NTamd64
+
+; ---- JMS56x 全系列 PID (含 BOT 和 UAS 变体) ----
+[DevList.NTamd64]
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_0561
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_0562
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_0567
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_1561
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_2561
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_2566
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_2590
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_3562
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_3569
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_8561
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_9561
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_9562
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_9566
+%DeviceDesc% = JMS56xBOT, USB\VID_152D&PID_9567
+
+; ---- 复用系统 usbstor.inf 的 BOT 安装段 ----
+[JMS56xBOT.NT]
+Include = usbstor.inf
+Needs   = USBSTOR_BULK.NT
+
+[JMS56xBOT.NT.HW]
+Include = usbstor.inf
+Needs   = USBSTOR_BULK.NT.HW
+
+[JMS56xBOT.NT.Services]
+Include = usbstor.inf
+Needs   = USBSTOR_BULK.NT.Services
+
+[Strings]
+Provider   = "JMicron Technology"
+DeviceDesc = "JMicron JMS56x USB 3.0 to SATA Adapter (BOT Mode)"
