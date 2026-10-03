@@ -13,15 +13,15 @@ title: JMS56x — JMicron Bridge Chip Archive
 
 | Section · 章节 | Description · 说明 |
 | --- | --- |
-| [Firmware](firmware/README.html) | 41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578, unified naming, chip lineage, version storage notes |
-| [BOT Driver](driver/README.html) | UAS → BOT override driver (Windows x64, self-signed) |
-| [Tools](tools/README.html) | JMMassProd M.P. Tool & FwUpdateTool |
-| [Docs](docs/README.html) | 9528U3 upgrade steps, standby timer how-to |
+| [Firmware](https://github.com/xRetia/JMS56x/blob/main/firmware/README.md) | 41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578, unified naming, chip lineage, version storage notes |
+| [BOT Driver](https://github.com/xRetia/JMS56x/blob/main/driver/README.md) | UAS → BOT override driver (Windows x64, self-signed) |
+| [Tools](https://github.com/xRetia/JMS56x/blob/main/tools/README.md) | JMMassProd M.P. Tool & FwUpdateTool |
+| [Docs](https://github.com/xRetia/JMS56x/blob/main/docs/README.md) | 9528U3 upgrade steps, standby timer how-to |
 
 ## Languages · 语言
 
-- English: [README](README.html)
-- 简体中文: [README.cn](README.cn.html)
+- English: [README](https://github.com/xRetia/JMS56x/blob/main/README.md)
+- 简体中文: [README.cn](https://github.com/xRetia/JMS56x/blob/main/README.cn.md)
 
 ## Safety · 免责声明
 
