@@ -1,0 +1,41 @@
+I Don't know if anyone already found this solution, but I'v decided to share it with all of you anyways.
+
+My Previously Wii drive is dead, I'v decided to buy USB Sata Enclosures/Cases, USB 3.0 for the "Fast" transfer of the WBFS files from my PC to External HD, But I'v Found, in many forums that JMicron  is a Cheap Chinese Company, and Most of his Sata Enclosures, suffer from Power Management on their Firmware, and for that reason they shut down the HDD and The Nintendo Wii doesn't bring it up again.
+
+Even in Windows is a pain in the ass, always wait for the drive Boot up, making this cases a pain in the ass, as I already said.
+
+Said That, Let's go to the Solution
+
+My Cristal Sata Slim USB 3.0 Case, came with the JMicron JMS578 Chip 
+
+After Many Research I'v Found a Firmware that worked great on disabling the Spin Down (Power Management) of Crystal Slim Case
+
+There are no way to Write, Read Firmware if there no HDD Attach to  the Enclosure, And is Safe to Update FW, no harm will happen to the HDD, but it is necessary. 
+
+First, as aways, backup The Original FW of  the Hdd case using the FwUpdateTool_v1_19_16_24.exe  Software AND MAKE SURE THAT YOUR CASE USES JMicron JMS578
+
+Open the  "JMS578_PPE_v124.01.00.02.bin" is not the latest, bur was the one that works better on my Wii, And Ps2 etc.
+
+After That. check the [ X ] RD Version BOX and [ X ] Including JM557 NVRAM.
+
+Write the Firmware, safety Unplug and You are Good to Go/Test
+
+There are plenty Others Firmwares that I'v Found, Feel Free to test it.
+
+
+BONUS: 
+Sites With Important Data, Just for  Research, all the files  are attached to  this Post.
+
+https://forum.odroid.com/viewtopic.php?t=28535
+
+https://www.jmicron.com/products/list/12
+
+https://wiki.odroid.com/odroid-xu4/software/jms578_fw_update
+
+https://www.station-drivers.com/index.php?option=com_remository&Itemid=353&func=fileinfo&id=3749&lang=en
+
+
+Maybe this tip Work with other Cases,  JMS583  JMS580 JMS578  JMS576 JMS562 JMS561U, With Corresponding Firmware if they have the same problem, Just Search  for PPE ( PowerPlus) FW and try to get the NVRAM configs of Spin  Down.
+
+Happy Playing  Super Mario Galaxy Again. And  hope this help someone.
+Sorry for my Bad English, mods Feel Free to Move  this Tread, and fix my speech.
