@@ -7,7 +7,7 @@ lang: cn
 tags: [固件, 8051, UAS, SCSI, 电源管理]
 ---
 
-> **English**: [/posts/2026/10/05/firmware-analysis/](/posts/2026/10/05/firmware-analysis/)
+> **English**: [/posts/2026/10/05/firmware-analysis/](/JMS56x/posts/2026/10/05/firmware-analysis/)
 
 ---
 

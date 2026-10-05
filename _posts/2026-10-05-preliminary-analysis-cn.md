@@ -7,7 +7,7 @@ lang: cn
 tags: [VBUS, suspend, 初步分析]
 ---
 
-> **English**: [/posts/2026/10/05/preliminary-analysis/](/posts/2026/10/05/preliminary-analysis/)
+> **English**: [/posts/2026/10/05/preliminary-analysis/](/JMS56x/posts/2026/10/05/preliminary-analysis/)
 
 ---
 

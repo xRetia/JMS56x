@@ -7,7 +7,7 @@ lang: cn
 tags: [反汇编, 8051, 伪C, 逆向]
 ---
 
-> **English**: [/posts/2026/10/05/static-analysis/](/posts/2026/10/05/static-analysis/)
+> **English**: [/posts/2026/10/05/static-analysis/](/JMS56x/posts/2026/10/05/static-analysis/)
 
 ---
 

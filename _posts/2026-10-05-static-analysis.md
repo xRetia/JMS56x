@@ -7,7 +7,7 @@ lang: en
 tags: [disassembly, 8051, pseudo-c, reverse-engineering]
 ---
 
-> **中文版**: [/posts/2026/10/05/static-analysis-cn/](/posts/2026/10/05/static-analysis-cn/)
+> **中文版**: [/posts/2026/10/05/static-analysis-cn/](/JMS56x/posts/2026/10/05/static-analysis-cn/)
 
 ---
 

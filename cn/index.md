@@ -8,17 +8,18 @@ lang: cn
 
 JMicron JMS56x 系列 USB 3.0 → SATA 桥接芯片资料合集（ORICO 9528U3 硬盘盒实测）：固件、UAS → BOT 切换驱动、量产工具，以及深度固件逆向分析。
 
-**[English](index.html)**
-
 ---
 
 ## 最新文章
 
-<ul>
+<ul class="post-list">
 {% for post in site.posts %}
 {% if post.lang == "cn" %}
-<li><time>{{ post.date | date: "%Y-%m-%d" }}</time> — <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-{% for tag in post.tags %}<code>{{ tag }}</code> {% endfor %}</li>
+<li>
+<time>{{ post.date | date: "%Y-%m-%d" }}</time>
+<a class="post-title-sm" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% for tag in post.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
+</li>
 {% endif %}
 {% endfor %}
 </ul>

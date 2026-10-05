@@ -1,4 +1,4 @@
-theme: jekyll-theme-primer
+theme: null
 title: JMS56x
 description: JMicron JMS56x USB-SATA bridge chip — firmware, driver, tools & analysis
 author: xRetia

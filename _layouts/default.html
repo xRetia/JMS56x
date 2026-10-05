@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav>
+        {%- if page.lang == 'cn' -%}
+        <a href="{{ '/' | relative_url }}">English</a>
+        {%- else -%}
+        <a href="{{ '/cn/' | relative_url }}">中文</a>
+        {%- endif -%}
+        <a href="https://github.com/xRetia/JMS56x">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer>
+    <div class="container">
+      <p><a href="https://github.com/xRetia/JMS56x">{{ site.title }}</a> — firmware analysis &amp; tools</p>
+    </div>
+  </footer>
+</body>
+</html>

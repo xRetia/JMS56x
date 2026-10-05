@@ -7,7 +7,7 @@ lang: en
 tags: [firmware, 8051, UAS, SCSI, power-management]
 ---
 
-> **中文版**: [/posts/2026/10/05/firmware-analysis-cn/](/posts/2026/10/05/firmware-analysis-cn/)
+> **中文版**: [/posts/2026/10/05/firmware-analysis-cn/](/JMS56x/posts/2026/10/05/firmware-analysis-cn/)
 
 ---
 

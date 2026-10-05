@@ -8,7 +8,7 @@ lang: en
 
 JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on an ORICO 9528U3 enclosure. Firmware, UAS → BOT override driver, mass production tools, and in-depth firmware reverse-engineering.
 
-**[中文](index.cn.html)**
+**[中文](/JMS56x/cn/)**
 
 ---
 
