@@ -1,3 +1,9 @@
+---
+layout: default
+title: 工具
+nav: true
+---
+
 # tools
 
 JMicron 量产工具与固件升级工具。

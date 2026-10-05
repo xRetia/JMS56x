@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMS56x UAS → BOT 覆盖驱动
+nav: true
+---
+
 # driver — JMS56x UAS → BOT 覆盖驱动（Windows x64）
 
 部分场景（老系统、数据恢复、某些工具软件）需要设备以 **BOT（Bulk-Only Transport）** 模式工作，而 JMS56x 默认以 **UAS** 模式加载。本驱动通过覆盖 INF 强制切换，不引入任何新内核。

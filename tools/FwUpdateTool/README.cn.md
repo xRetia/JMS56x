@@ -1,3 +1,9 @@
+---
+layout: default
+title: FwUpdateTool
+nav: true
+---
+
 # FwUpdateTool — JM203x FW Update Utility
 
 JMicron 桥接芯片固件升级工具。

@@ -1,6 +1,12 @@
+﻿---
+layout: default
+title: JMS565 Firmware Analysis Report
+nav: true
+---
+
 # JMS565 Firmware Analysis Report
 
-> **Languages:** English · [简体中文](JMS565_firmware_analysis_zh.md)
+> **Languages:** English · [简体中文](JMS565_firmware_analysis_cn.md)
 
 ## Test Environment
 
@@ -201,7 +207,7 @@ Neither is a SCSI command-layer defect — SYNC CACHE / START STOP / PREVENT ALL
 | File | Description |
 |---|---|
 | [JMS565 Static Analysis Materials](JMS565_static_analysis_en.md) | Disassembly methodology, control flow, pseudo-C reconstruction |
-| `JMS565_analysis_zh.md` | Earlier preliminary static analysis (VBUS/suspend paths) |
+| `JMS565_analysis_cn.md` | Earlier preliminary static analysis (VBUS/suspend paths) |
 | `JMS565_full_linear_disassembly.lst` | Linear byte-by-byte disassembly of code region |
 | `JMS565_reachable_disassembly.lst` | Reachable disassembly from reset/common vectors |
 | `JMS565_control_flow_summary.txt` | Call graph, unresolved targets, string table |

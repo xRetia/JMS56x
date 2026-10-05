@@ -1,3 +1,9 @@
+﻿---
+layout: default
+title: JMS565 固件完整分析报告
+nav: true
+---
+
 # JMS565 固件完整分析报告
 
 > **语言：** [English](JMS565_firmware_analysis_en.md) · 简体中文
@@ -200,8 +206,8 @@
 
 | 文件 | 说明 |
 |---|---|
-| [JMS565 静态分析资料](JMS565_static_analysis_zh.md) | 反汇编方法、控制流、伪 C 还原 |
-| `JMS565_analysis_zh.md` | 早期初步静态分析（VBUS/suspend 路径） |
+| [JMS565 静态分析资料](JMS565_static_analysis_cn.md) | 反汇编方法、控制流、伪 C 还原 |
+| `JMS565_analysis_cn.md` | 早期初步静态分析（VBUS/suspend 路径） |
 | `JMS565_full_linear_disassembly.lst` | 代码映射区逐字节线性反汇编 |
 | `JMS565_reachable_disassembly.lst` | 从 reset/常见向量出发的可达反汇编 |
 | `JMS565_control_flow_summary.txt` | 调用关系、未解析目标、字符串表 |

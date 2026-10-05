@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tools
+nav: true
+---
+
 # tools
 
 JMicron mass production and firmware update utilities.

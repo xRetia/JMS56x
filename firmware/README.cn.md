@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMS56x 固件库
+nav: true
+---
+
 # JMS56x 固件库（Firmware Collection）
 
 JMicron JMS56x 系列 USB-SATA 桥接/RAID 控制器固件归档。统一命名、按芯片/盘位/功能编目。**全部文件为原始二进制，未做修改。**

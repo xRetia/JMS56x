@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMMassProd
+nav: true
+---
+
 # JMMassProd — JMicron 2033x M.P. Tool
 
 Mass production tool for JMicron USB-SATA bridge chips (JMS56x family).

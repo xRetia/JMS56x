@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMS565 8051 固件静态分析报告（早期）
+nav: true
+---
+
 # JMS565 8051 固件静态分析报告
 
 ## 结论先行

@@ -1,3 +1,9 @@
+---
+layout: default
+title: FwUpdateTool
+nav: true
+---
+
 # FwUpdateTool — JM203x FW Update Utility
 
 Simple firmware update utility for JMicron bridge chips.

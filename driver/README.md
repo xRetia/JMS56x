@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMS56x UAS → BOT Override Driver
+nav: true
+---
+
 # driver — JMS56x UAS → BOT Override Driver (Windows x64)
 
 Some scenarios (older systems, data-recovery tools, certain utilities) require the device to operate in **BOT (Bulk-Only Transport)** mode, while JMS56x loads as **UAS** by default. This package forces the switch with an override INF — no new kernel driver is introduced.

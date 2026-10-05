@@ -1,3 +1,9 @@
+---
+layout: default
+title: 文档
+nav: true
+---
+
 # docs
 
 ORICO 9528U3（JMS551 / JMS56x 系列）配套文档。

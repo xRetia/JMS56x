@@ -1,6 +1,12 @@
+﻿---
+layout: default
+title: JMS565 Static Analysis Materials
+nav: true
+---
+
 # JMS565 Firmware Static Analysis Materials
 
-> **Languages:** English · [简体中文](JMS565_static_analysis_zh.md)
+> **Languages:** English · [简体中文](JMS565_static_analysis_cn.md)
 
 ## 1. Overview
 

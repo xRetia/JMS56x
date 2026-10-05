@@ -1,3 +1,9 @@
+﻿---
+layout: default
+title: JMS565 Firmware Analysis
+nav: true
+---
+
 # analysis — JMS565 Firmware Analysis
 
 Static disassembly, pseudo-C reconstruction, live SCSI command support testing, power management, and safe-removal analysis of JMS565 firmware (version 105.03.01.02).
@@ -10,7 +16,7 @@ Static disassembly, pseudo-C reconstruction, live SCSI command support testing, 
 | --- | --- |
 | [`JMS565_firmware_analysis_en.md`](JMS565_firmware_analysis_en.md) | Full analysis report (architecture / UAS / SCSI / power management / safe removal) |
 | [`JMS565_static_analysis_en.md`](JMS565_static_analysis_en.md) | Static analysis materials (disassembly methodology / control flow / pseudo-C) |
-| [`JMS565_analysis_zh.md`](JMS565_analysis_zh.md) | Earlier preliminary static analysis (VBUS / suspend paths) |
+| [`JMS565_analysis_cn.md`](JMS565_analysis_cn.md) | Earlier preliminary static analysis (VBUS / suspend paths) |
 
 ## Attachments
 

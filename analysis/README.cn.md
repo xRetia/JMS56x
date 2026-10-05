@@ -1,3 +1,9 @@
+﻿---
+layout: default
+title: JMS565 固件分析
+nav: true
+---
+
 # analysis — JMS565 固件分析（Firmware Analysis）
 
 JMS565 固件（版本 105.03.01.02）的静态反汇编、伪 C 还原、SCSI 命令支持度实测、电源管理与安全删除分析。
@@ -8,9 +14,9 @@ JMS565 固件（版本 105.03.01.02）的静态反汇编、伪 C 还原、SCSI �
 
 | 文件 | 说明 |
 | --- | --- |
-| [`JMS565_firmware_analysis_zh.md`](JMS565_firmware_analysis_zh.md) | 完整分析报告（架构 / UAS / SCSI / 电源管理 / 安全删除） |
-| [`JMS565_static_analysis_zh.md`](JMS565_static_analysis_zh.md) | 静态分析资料（反汇编方法 / 控制流 / 伪 C 还原） |
-| [`JMS565_analysis_zh.md`](JMS565_analysis_zh.md) | 早期初步静态分析（VBUS / suspend 路径） |
+| [`JMS565_firmware_analysis_cn.md`](JMS565_firmware_analysis_cn.md) | 完整分析报告（架构 / UAS / SCSI / 电源管理 / 安全删除） |
+| [`JMS565_static_analysis_cn.md`](JMS565_static_analysis_cn.md) | 静态分析资料（反汇编方法 / 控制流 / 伪 C 还原） |
+| [`JMS565_analysis_cn.md`](JMS565_analysis_cn.md) | 早期初步静态分析（VBUS / suspend 路径） |
 
 ## 附件
 

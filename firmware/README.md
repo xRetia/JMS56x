@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMS56x Firmware Collection
+nav: true
+---
+
 # JMS56x Firmware Collection
 
 JMicron JMS56x family USB-SATA bridge / RAID controller firmware archive. Files follow a unified naming scheme and are cataloged by chip / bay count / feature. **All binaries are unmodified originals.**

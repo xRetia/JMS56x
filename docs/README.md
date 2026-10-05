@@ -1,3 +1,9 @@
+---
+layout: default
+title: Docs
+nav: true
+---
+
 # docs
 
 Supporting documents for the ORICO 9528U3 enclosure (JMS551 / JMS56x family).

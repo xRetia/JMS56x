@@ -1,3 +1,9 @@
+---
+layout: default
+title: JMMassProd
+nav: true
+---
+
 # JMMassProd — JMicron 2033x M.P. Tool
 
 JMicron USB-SATA 桥接芯片量产工具（JMS56x 系列）。
