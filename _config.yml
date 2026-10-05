@@ -1,0 +1,29 @@
+theme: jekyll-theme-leap-day
+title: JMS56x
+description: JMicron JMS56x USB-SATA bridge chip — firmware, driver, tools & analysis
+author: xRetia
+show_downloads: false
+
+permalink: /posts/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
