@@ -1,68 +1,30 @@
 ---
 layout: default
 title: JMS56x — JMicron Bridge Chip Archive
-lang: en
 ---
 
 # JMS56x
 
-JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on an ORICO 9528U3 enclosure. Firmware, UAS → BOT override driver, mass production tools, and in-depth firmware reverse-engineering.
+**EN** — JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on an ORICO 9528U3 enclosure. Firmware, a UAS → BOT override driver, official mass production tools and documents.
 
----
+**中文** — JMicron JMS56x 系列 USB 3.0 → SATA 桥接芯片资料合集（ORICO 9528U3 硬盘盒实测）：固件、UAS → BOT 切换驱动、官方量产工具与配套文档。
 
-## Latest Analysis Posts
+## Contents · 目录
 
-<ul class="post-list">
-{% for post in site.posts %}
-  {% if post.lang != "cn" %}
-  <li>
-    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-    <a class="post-title-sm" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.tags %}<br>{% for tag in post.tags %}<span class="tag">{{ tag }}</span> {% endfor %}{% endif %}
-  </li>
-  {% endif %}
-{% endfor %}
-</ul>
+| Section · 章节 | Description · 说明 |
+| --- | --- |
+| [Firmware](https://github.com/xRetia/JMS56x/blob/main/firmware/README.md) | 41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578, unified naming, chip lineage, version storage notes |
+| [BOT Driver](https://github.com/xRetia/JMS56x/blob/main/driver/README.md) | UAS → BOT override driver (Windows x64, self-signed) |
+| [Tools](https://github.com/xRetia/JMS56x/blob/main/tools/README.md) | JMMassProd M.P. Tool & FwUpdateTool |
+| [Docs](https://github.com/xRetia/JMS56x/blob/main/docs/README.md) | 9528U3 upgrade steps, standby timer how-to |
 
----
+## Languages · 语言
 
-## Sections
+- English: [README](https://github.com/xRetia/JMS56x/blob/main/README.md)
+- 简体中文: [README.cn](https://github.com/xRetia/JMS56x/blob/main/README.cn.md)
 
-<div class="section-grid">
-  <div class="section-card">
-    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/firmware">💾 Firmware</a></h3>
-    <p>41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578. Unified naming, chip lineage, version notes.</p>
-  </div>
-  <div class="section-card">
-    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/driver">🔌 BOT Driver</a></h3>
-    <p>UAS → BOT override driver (Windows x64, self-signed). No new .sys — uses system usbstor.sys.</p>
-  </div>
-  <div class="section-card">
-    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/tools">🛠️ Tools</a></h3>
-    <p>JMMassProd M.P. Tool (EEPROM / VID / PID / standby timer) & FwUpdateTool.</p>
-  </div>
-  <div class="section-card">
-    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/docs">📄 Docs</a></h3>
-    <p>ORICO 9528U3 upgrade screenshots, standby-timer how-to.</p>
-  </div>
-  <div class="section-card">
-    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/analysis">🔍 Analysis</a></h3>
-    <p>Full disassembly, pseudo-C, control flow, SCSI command testing, power management analysis.</p>
-  </div>
-</div>
+## Safety · 免责声明
 
----
+Flashing firmware or modifying EEPROM carries a real brick risk — always back up the original firmware first. All materials come from web collection and personal backups, for research and study only.
 
-## Key Findings
-
-- **Architecture**: 8051 core (CISC), dual code space (external Flash 56 KB + internal mask ROM)
-- **UAS**: Full BOT+UAS dual-protocol support via USB alternate setting, no firmware-level disable switch
-- **SCSI**: 16 standard commands confirmed supported; TRIM (UNMAP/WRITE SAME) not passed through
-- **SAT defect**: SMART Return Status registers missing — bridge chip swallows ATA output registers
-- **Power**: StandbyTimer=0 in chip EEPROM fixes overnight VBUS-recovery enumeration failure
-- **Safe removal**: CM API eject works; right-click "Eject" missing (INQUIRY RMB=0)
-- **UAS drops**: Root cause in USB transport layer, not SCSI command layer
-
----
-
-*Flashing firmware or modifying EEPROM carries a real brick risk — always back up first. All materials are for research and study only.*
+刷写固件、修改 EEPROM 存在变砖风险，请务必先备份原固件。本站资料来自网络收集与个人备份，仅供学习研究使用。
