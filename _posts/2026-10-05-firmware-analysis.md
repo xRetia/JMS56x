@@ -7,17 +7,9 @@ lang: en
 tags: [firmware, 8051, UAS, SCSI, power-management]
 ---
 
-> 中文版: [/posts/2026/10/05/firmware-analysis-cn.html]({/posts/2026/10/05/firmware-analysis-cn.html})
+> **中文版**: [/posts/2026/10/05/firmware-analysis-cn/](/posts/2026/10/05/firmware-analysis-cn/)
 
-﻿---
-layout: default
-title: JMS565 Firmware Analysis Report
-nav: true
 ---
-
-# JMS565 Firmware Analysis Report
-
-> **Languages:** English · [简体中文](JMS565_firmware_analysis_cn.md)
 
 ## Test Environment
 

@@ -17,7 +17,7 @@ JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on
 <ul>
 {% for post in site.posts %}
 {% if post.lang != "cn" %}
-<li><time>{{ post.date | date: "%Y-%m-%d" }}</time> — <a href="{{ post.url }}">{{ post.title }}</a><br>
+<li><time>{{ post.date | date: "%Y-%m-%d" }}</time> — <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
 {% for tag in post.tags %}<code>{{ tag }}</code> {% endfor %}</li>
 {% endif %}
 {% endfor %}

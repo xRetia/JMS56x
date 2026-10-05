@@ -7,6 +7,10 @@ lang: cn
 tags: [VBUS, suspend, 初步分析]
 ---
 
+> **English**: [/posts/2026/10/05/preliminary-analysis/](/posts/2026/10/05/preliminary-analysis/)
+
+---
+
 ## 结论先行
 
 这份镜像里**确实能看到 USB/VBUS 状态采样与延迟回调结构**，也有 `vbus_debounce_1`、`vbus_debounce_0`、`u2_go_suspend`、`u2_exit_suspend` 等字符串。因此，“主控 8051 一直供电、Windows 关机时 USB VBUS 消失、隔夜后再上电无法重新枚举”与**USB PHY/控制器在长时间 suspend/VBUS 缺失后未彻底恢复**的方向相符。

@@ -7,17 +7,9 @@ lang: en
 tags: [disassembly, 8051, pseudo-c, reverse-engineering]
 ---
 
-> 中文版: [/posts/2026/10/05/static-analysis-cn.html]({/posts/2026/10/05/static-analysis-cn.html})
+> **中文版**: [/posts/2026/10/05/static-analysis-cn/](/posts/2026/10/05/static-analysis-cn/)
 
-﻿---
-layout: default
-title: JMS565 Static Analysis Materials
-nav: true
 ---
-
-# JMS565 Firmware Static Analysis Materials
-
-> **Languages:** English · [简体中文](JMS565_static_analysis_cn.md)
 
 ## 1. Overview
 

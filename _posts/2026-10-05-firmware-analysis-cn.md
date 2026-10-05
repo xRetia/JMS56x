@@ -1,23 +1,15 @@
 ﻿---
 layout: default
-title: "JMS565 固件完整分析报告"
+title: "JMS565 固件完整分析：架构、UAS、SCSI、电源管理"
 date: 2026-10-05
 author: xRetia
 lang: cn
 tags: [固件, 8051, UAS, SCSI, 电源管理]
 ---
 
-> English: [/posts/2026/10/05/firmware-analysis-en.html]({/posts/2026/10/05/firmware-analysis-en.html})
+> **English**: [/posts/2026/10/05/firmware-analysis/](/posts/2026/10/05/firmware-analysis/)
 
-﻿---
-layout: default
-title: JMS565 固件完整分析报告
-nav: true
 ---
-
-# JMS565 固件完整分析报告
-
-> **语言：** [English](JMS565_firmware_analysis_en.md) · 简体中文
 
 ## 测试环境
 
