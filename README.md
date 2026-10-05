@@ -13,6 +13,7 @@ JMicron JMS56x family USB 3.0 → SATA bridge chip resource collection, verified
 
 | Path | Contents |
 | --- | --- |
+| [`analysis/`](analysis/) | JMS565 firmware analysis report (architecture / UAS / SCSI command support / power management / safe removal) |
 | [`docs/`](docs/) | ORICO 9528U3 upgrade screenshots, standby-timer how-to |
 | [`driver/`](driver/) | JMS56x UAS → BOT override driver (self-contained, no new `.sys`) |
 | [`firmware/`](firmware/) | JMS56x family firmware archive — 41 binaries, unified naming, chip lineage and version notes |
@@ -24,6 +25,7 @@ Every directory ships both `README.md` (English) and `README.cn.md` (简体中�
 
 - **Switch UAS → BOT**: right-click `driver/install.bat` → Run as administrator (or double-click; it elevates itself), then replug the device. Uninstall with `driver/uninstall.bat`.
 - **Find a firmware**: see the [firmware index](firmware/README.md).
+- **Firmware analysis**: see the [JMS565 firmware analysis report](analysis/JMS565_firmware_analysis_en.md); static disassembly and pseudo-C reconstruction in the [static analysis materials](analysis/JMS565_static_analysis_en.md).
 - **Change VID/PID or standby timer**: open the M.P. Tool under [`tools/JMMassProd`](tools/JMMassProd/README.md), check `EEPROM Update`, set `Standby Timer = 0` to disable auto standby.
 
 ## Disclaimer

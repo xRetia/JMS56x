@@ -1,0 +1,126 @@
+File SHA256: c65feffa30f9697ae383ecbd4b90514c53f1f8ec8ed2de380abddfff2718d623
+Code range: file 0x010000-0x01DFFF mapped to CPU 0000-DFFF.
+Reachable instruction starts: 611; direct calls seen: 13.
+Long zero-filled targets (>=64 bytes contiguous) are treated as unresolved holes, not executable NOP code.
+
+CALL TARGET <- CALLERS
+002E <- 9959
+59B1 <- 6100
+74E5 <- 8042
+993D <- 8045
+AB70 <- 22E6
+AB84 <- 9949
+BD0D <- 8048
+D546 <- DA7F
+D792 <- 59D3
+DA7F <- 22EE
+DAFD <- 8016
+DDE0 <- 8029
+DDEA <- 802E
+
+Unresolved control-flow targets entering long zero-filled spans:
+5F43 file=0x015F43 bytes=00 00 00 00 00 00 00 00
+BD0D file=0x01BD0D bytes=00 00 00 00 00 00 00 00
+DDE0 file=0x01DDE0 bytes=00 00 00 00 00 00 00 00
+DDEA file=0x01DDEA bytes=00 00 00 00 00 00 00 00
+DEC4 file=0x01DEC4 bytes=00 00 00 00 00 00 00 00
+DFA4 file=0x01DFA4 bytes=00 00 00 00 00 00 00 00
+DFBC file=0x01DFBC bytes=00 00 00 00 00 00 00 00
+
+ASCII strings in code region:
+0006: u:Xu;(
+002D: u:Xu;
+0038: u:Wu;
+0058: u:6u;
+015A: |5}&{
+053C: _|L}E{
+0B26: 8E7`<
+1561: |M}v{
+202D: $i $|7$
+258D: T?`J$
+2603: `P$7`
+27CA: u:4u;
+27FF: u:4u;
+2834: u:4u;
+3170: umsuF
+3570: T|L}n{
+35E8: T|L}n{
+38EA: &0%= 
+44C3: II#IO%I
+44CE: /Id5Is;In<I&BI
+44DD: UI ZI
+45DB: AuT]uUp"
+49E3: |5}^{
+4A12: |5}X{
+51CB: u\vu]
+5795: "RAID0RAID1LARGE
+5868: Virtual CD
+5873: SES Device
+587E: USB3.0
+58AA: Zs]Q7
+5935: ulKum
+59EA: uUo"t
+5A2F: uU?"uT
+5A36: uU:"0
+60EA: u:Xu;
+6400: |L}y{
+6630: "spkt=
+6733: u:5u;
+6756: u:4u;
+6779: u:4u;
+679C: u:4u;
+67BF: u:4u;
+6AA9: ui["0s
+6ABA: uiP"0r
+6AE0: uiq"0r
+738D: u]U"u\
+7478: DP7~y
+748F: uXCuYQ"
+78E3: u\<u]
+7BA5: ru\hu]
+80FF: |L}n{
+825D: >|4},{
+8394: ul~um
+840D: u\Tu]
+8726: "uXCuYQ"
+881E: u\Tu]
+88A6: "uTHuU
+89A9: "|L}T{
+8B90: ulpum{uT
+9200: u\hu]
+9421: MNOp uA
+9748: |4}~{
+981E: umh"ul
+A438: u`@ual"
+A49C: AuT]uUp"
+A9B6: u\Tu]
+B445: d4`%0|
+B4B9: DP'tJ/
+B5FF: P0u\Tu]
+B657: "u\wu]
+B79E: uhfui
+B906: ulKum
+BA03: "JMicron JMS56x Series   RANDOM__0123456789ABCDEF
+BBA7: uhIui
+C0F1: ]uhrui
+C247: vbus_debounce_1 !!!
+C25B: vbus_debounce_0 !!!
+C3A2: ulcum
+C418: mc" r
+C482: |Iu\Tu]
+C8FD: 2|4},{
+C9CD: u2_go_suspend
+C9DB: u2_exit_suspend
+CA58: uhIui
+D08A: "stop=
+D091: start=
+D098: Active=
+D1B7: uhIui
+D285: u\Tu]
+D2D7: uTzuU
+D340: umdu\
+D446: u\vu]
+D79C: ui!"0
+DA36: umX" 
+DB7E: ui4"ul
+DBEA: "22"""""""""""""""""""
