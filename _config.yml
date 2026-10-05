@@ -1,4 +1,39 @@
-theme: jekyll-theme-cayman
+theme: minima
 title: JMS56x
-description: JMicron JMS56x USB 3.0 to SATA firmware, driver & tools archive
+description: JMicron JMS56x USB 3.0 to SATA firmware, driver, tools & analysis
+author: xRetia
 show_downloads: false
+
+permalink: /posts/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - .temp
+  - .git
+  - firmware
+  - driver
+  - tools
+  - docs
+  - analysis/disasm8051.py
+  - analysis/*.lst
+  - analysis/*.txt
+  - analysis/*.c
+  - Gemfile
+  - Gemfile.lock
+  - vendor

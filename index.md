@@ -1,97 +1,68 @@
-﻿---
+---
 layout: default
 title: JMS56x — JMicron Bridge Chip Archive
 lang: en
 ---
 
-<div style="position:absolute;top:8px;right:16px;font-size:14px">
-  <a href="index.cn.html">中文</a>
-</div>
-
 # JMS56x
 
-JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on an ORICO 9528U3 enclosure. Firmware, a UAS → BOT override driver, official mass production tools, documents, and in-depth firmware analysis.
+JMicron JMS56x family USB 3.0 → SATA bridge chip resource archive, verified on an ORICO 9528U3 enclosure. Firmware, UAS → BOT override driver, mass production tools, and in-depth firmware reverse-engineering.
+
+---
+
+## Latest Analysis Posts
+
+<ul class="post-list">
+{% for post in site.posts %}
+  {% if post.lang != "cn" %}
+  <li>
+    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a class="post-title-sm" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.tags %}<br>{% for tag in post.tags %}<span class="tag">{{ tag }}</span> {% endfor %}{% endif %}
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ---
 
 ## Sections
 
-| Section | Description |
-| --- | --- |
-| [🔍 Analysis](#analysis) | Firmware analysis reports, disassembly, pseudo-C |
-| [💾 Firmware](#firmware) | 41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578 |
-| [🔌 BOT Driver](#bot-driver) | UAS → BOT override driver (Windows x64) |
-| [🛠️ Tools](#tools) | JMMassProd M.P. Tool & FwUpdateTool |
-| [📄 Docs](#docs) | 9528U3 upgrade steps, standby timer how-to |
+<div class="section-grid">
+  <div class="section-card">
+    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/firmware">💾 Firmware</a></h3>
+    <p>41 binaries — JMS551 / 561 / 561B / 561U / 565 / 567 / 578. Unified naming, chip lineage, version notes.</p>
+  </div>
+  <div class="section-card">
+    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/driver">🔌 BOT Driver</a></h3>
+    <p>UAS → BOT override driver (Windows x64, self-signed). No new .sys — uses system usbstor.sys.</p>
+  </div>
+  <div class="section-card">
+    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/tools">🛠️ Tools</a></h3>
+    <p>JMMassProd M.P. Tool (EEPROM / VID / PID / standby timer) & FwUpdateTool.</p>
+  </div>
+  <div class="section-card">
+    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/docs">📄 Docs</a></h3>
+    <p>ORICO 9528U3 upgrade screenshots, standby-timer how-to.</p>
+  </div>
+  <div class="section-card">
+    <h3><a href="https://github.com/xRetia/JMS56x/tree/main/analysis">🔍 Analysis</a></h3>
+    <p>Full disassembly, pseudo-C, control flow, SCSI command testing, power management analysis.</p>
+  </div>
+</div>
 
 ---
 
-## Analysis
+## Key Findings
 
-JMS565 firmware (version 105.03.01.02) reverse-engineering: 8051 architecture, BOT/UAS dual-protocol, SCSI command support live testing, power management (StandbyTimer / go_suspend / VBUS recovery), safe removal, SAT pass-through defects.
-
-### Reports
-
-| Document | Description |
-| --- | --- |
-| [📋 Full Analysis Report](analysis/JMS565_firmware_analysis_en.md) | Architecture / UAS / SCSI / Power / Safe Removal |
-| [🔧 Static Analysis Materials](analysis/JMS565_static_analysis_en.md) | Disassembly / Control Flow / Pseudo-C |
-| [📝 Preliminary Analysis](analysis/JMS565_analysis_cn.md) | Early VBUS / suspend path analysis |
-
-### Attachments
-
-| File | Description |
-| --- | --- |
-| [Linear disassembly (37,005 lines)](analysis/JMS565_full_linear_disassembly.lst) | Byte-by-byte disassembly of code region |
-| [Reachable disassembly (612 insns)](analysis/JMS565_reachable_disassembly.lst) | From reset / interrupt vectors |
-| [Control flow summary](analysis/JMS565_control_flow_summary.txt) | Call graph / zero-span targets / strings |
-| [Pseudo-C](analysis/JMS565_pseudocode.c) | Reset / VBUS / suspend / StandbyTimer |
-| [Disassembly script](analysis/disasm8051.py) | Local 8051 disassembler |
+- **Architecture**: 8051 core (CISC), dual code space (external Flash 56 KB + internal mask ROM)
+- **UAS**: Full BOT+UAS dual-protocol support via USB alternate setting, no firmware-level disable switch
+- **SCSI**: 16 standard commands confirmed supported; TRIM (UNMAP/WRITE SAME) not passed through
+- **SAT defect**: SMART Return Status registers missing — bridge chip swallows ATA output registers
+- **Power**: StandbyTimer=0 in chip EEPROM fixes overnight VBUS-recovery enumeration failure
+- **Safe removal**: CM API eject works; right-click "Eject" missing (INQUIRY RMB=0)
+- **UAS drops**: Root cause in USB transport layer, not SCSI command layer
 
 ---
 
-## Firmware
-
-41 firmware binaries covering JMS551 / 561 / 561B / 561U / 565 / 567 / 578, unified naming, cataloged by chip / bay / feature.
-
-| Link | Description |
-| --- | --- |
-| [📦 Firmware Index](firmware/README.md) | Naming scheme, chip lineage, version notes |
-
----
-
-## BOT Driver
-
-UAS → BOT override driver (Windows x64, self-signed). Adds no new `.sys` — uses the system built-in `usbstor.sys`.
-
-| Link | Description |
-| --- | --- |
-| [🔌 Driver README](driver/README.md) | Installation, supported PIDs, technical details |
-
----
-
-## Tools
-
-JMicron official mass production and firmware update utilities.
-
-| Link | Description |
-| --- | --- |
-| [🛠️ Tools](tools/README.md) | JMMassProd & FwUpdateTool overview |
-| [JMMassProd](tools/JMMassProd/README.md) | M.P. Tool — EEPROM / VID / PID / standby timer |
-| [FwUpdateTool](tools/FwUpdateTool/README.md) | Firmware update / backup utility |
-
----
-
-## Docs
-
-ORICO 9528U3 upgrade screenshots and standby-timer how-to.
-
-| Link | Description |
-| --- | --- |
-| [📄 Docs](docs/README.md) | Upgrade steps, standby-timer how-to |
-
----
-
-## Safety
-
-Flashing firmware or modifying EEPROM carries a real brick risk — always back up the original firmware first. All materials come from web collection and personal backups, for research and study only.
+*Flashing firmware or modifying EEPROM carries a real brick risk — always back up first. All materials are for research and study only.*
